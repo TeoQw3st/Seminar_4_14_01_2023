@@ -17,20 +17,25 @@
 // Console.WriteLine(index);
 
 // решение не через массив
-Console.WriteLine("Введите любое число");
-int number = Convert.ToInt32(Console.ReadLine());
+
+int summ (int arg){
 int b = 10;
 int c = 1;
-int summ = number%b/c;
-int n = number;
+int summ = arg%b/c;
+int n = arg;
 while (n!=0){
-    n= number%(b*10)/(c*10);
-    number = number/b;
+    n= arg%(b*10)/(c*10);
+    arg = arg/b;
     summ=summ+n;
+}
+return summ;
 }
 // // int b = number%100/10;
 // // int c = number%1000/100;
 // Console.WriteLine($"a = {a}");
 // Console.WriteLine($"b = {b}");
 // Console.WriteLine($"c = {c}");
-Console.WriteLine($"сумма чисел = {summ}");
+Console.WriteLine("Введите любое число");
+int number = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"сумма чисел = {summ (number)}");
